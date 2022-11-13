@@ -1,0 +1,11 @@
+class MainArray1
+{
+	public static void main(String[] args) 
+	{
+		int ar []=ArrayOperation.readArray();
+		System.out.println ("User entered the array");
+		ArrayOperation.displayArray(ar);
+		System.out.println ("Biggest no is..."+ArrayOperation.getBiggest(ar));
+		System.out.println ("Smallest no. is... "+ArrayOperation.getSmallest(ar));
+	}
+}

@@ -1,0 +1,19 @@
+/*
+ABCDE
+ BCDE
+  CDE
+   DE
+    E
+*/
+import java.util.Scanner;
+class PrintPattern50
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the value of n");
+		int n=sc.nextInt();
+
+	}
+
+}

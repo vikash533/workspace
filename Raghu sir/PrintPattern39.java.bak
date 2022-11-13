@@ -1,0 +1,19 @@
+/*
+12345
+ 1234
+  123
+   12
+    1
+*/
+import java.util.Scanner;
+class PrintPattern39
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the value of n");
+		int n=sc.nextInt();
+
+	}
+
+}

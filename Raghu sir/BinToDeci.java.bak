@@ -1,0 +1,38 @@
+//wajp to convert binary to decimal
+import java.util.Scanner;
+class BinToDeci 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter the binary no.");
+		int n=sc.nextInt();
+		int rs=getDecimal(n);
+		System.out.println ("The decimal no is..."+rs);
+	}
+	public static int getDecimal(int n)
+	{
+	  int count=0;
+	  int sum=0;
+	  do
+	  {
+		  
+		  int d=n%10;
+          sum=sum+d*pow(2,count);
+		  count++;
+		  n=n/10;
+	  }
+	  while (n!=0);
+	  return sum;
+	}
+	public static int pow(int d,int count)
+	{
+	  int pw=1;
+	  while (count>1)
+	  {
+		  pw=pw*d;
+		  count--;
+	  }
+	  return pw;
+	}
+}

@@ -1,0 +1,45 @@
+//define a method to return how many even and odd present in an array
+import java.util.Scanner;
+class Array5 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int n=sc.nextInt();
+		int ar []=new int [n];
+		System.out.println ("Enter "+n+" values");
+		for (int i=0;i<n ;i++ )
+		{
+			ar [i]=sc.nextInt();
+		}
+		int rs=getEven(ar);
+		int mn=getOdd(ar);
+         System.out.println ("Even no..."+rs);
+		 System.out.println ("odd no..."+mn);
+	}
+	public static int getEven(int ar[])
+	{
+		int ev=0;
+	   for (int i=0;i<ar.length ;i++ )
+	   {
+          if (ar [i]%2==0)
+          {
+			  ev++;
+          }
+	   }
+	   return ev;
+	}
+	public static int getOdd(int ar [])
+	{
+		int od=0;
+	    for (int i=0;i<ar.length ;i++ )
+	    {
+			if (ar [i]%2!=0)
+			{
+               od++;
+			}
+	    }
+		return od;
+	}
+}

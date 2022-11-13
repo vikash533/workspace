@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class BinaryToDecimal 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter the Binary number");
+		int n=sc.nextInt();
+		String rs=getDec(n);
+		System.out.println (rs);
+	}
+	public static int getDec(int n)
+	{
+		int bin=0,pw=1;
+		do
+		{
+			int d=n%10;
+			bin=bin+d*pw;
+			pw=pw*2;
+			n=n/10;
+		}
+		while (n!=0);
+		return bin;
+	}
+}

@@ -1,0 +1,28 @@
+//define a method to return reverse of a string
+import java.util.Scanner;
+class MainStr6 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter the String");
+		String str=sc.nextLine();
+		String reverse=getReverse(str);
+		System.out.println ("Reversed string is...."+reverse);
+	}
+	static String getReverse(String str)
+	{
+		char ch []=str.toCharArray();
+		int i=0,j=ch.length-1;
+		while (i<j)
+		{
+           char temp=ch[i];
+		   ch [i]=ch [j];
+		   ch [j]=temp;
+		   i++;
+		   j--;
+		}
+		String rev=new String (ch);
+		return rev;
+	}
+}

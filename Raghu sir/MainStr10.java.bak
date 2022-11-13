@@ -1,0 +1,32 @@
+//wajp to convert every word last character into capital and remaining all into small
+import java.util.Scanner;
+class MainStr10
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("ENTER THE STRING VALUE : ");
+		String str=sc.nextLine();
+		String c=getLastWordCapital(str);
+		System.out.println (c);
+	}
+	static String getLastWordCapital(String str)
+	{
+	   char ch []=str.toCharArray();
+	   for (int i=0;i<ch.length ;i++ )
+	   {
+		    if (i==ch.length-1 && ch[i+1]!=' ' || ch[i]!=' '&& ch[i+1]==' ')
+		    {
+				if(ch [i]>='a' && ch [i]<='z')
+					ch [i]=(char)(ch[i]-32);
+		    }
+			else if (ch [i]<='A' && ch [i]>='Z')
+			{
+				ch [i]=(char)(ch[i]+32);
+			}
+	   }
+	   String s=new String (ch);
+	   return s;
+	}
+
+}

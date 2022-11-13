@@ -1,0 +1,30 @@
+//wajp to define a method to return how many prime digit presentv in a no.
+import java.util.Scanner;
+class Example26 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter the number");
+		int n=sc.nextInt();
+		int rs=getPrime(n);
+		System.out.println ("The number of prime  digit are..."+rs);
+	}
+	public static int getPrime(int n)
+	{
+		int count=0;
+		//boolean b=true;
+	    while (n!=0)
+	    {
+			int d=n%10;
+			if (d==1||d==2||d==3||d==5||d==7)
+			{
+				count++;
+			}
+		
+			n=n/10;
+	    }
+
+		return count;
+	}
+}

@@ -1,0 +1,26 @@
+//wajp to convert decimal to octal
+import java.util.Scanner;
+class DeciToOct 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter the decimal number");
+		int n=sc.nextInt();
+		String rs=getDecToBin(n);
+		System.out.println (rs);
+	}
+	public static String getDecToBin(int n)
+	{
+		String bin="";
+	    do
+	    {
+			int d=n%8;
+			bin=d+bin;
+            n=n/8;
+
+	    }
+	    while (n!=0);
+		return bin;
+	}
+}

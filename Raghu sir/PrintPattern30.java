@@ -1,0 +1,30 @@
+/*
+10101
+0101
+010
+10
+1
+*/
+import java.util.Scanner;
+class PrintPattern30
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter the value of n");
+		int n=sc.nextInt();
+		int x=1;
+		for (int i=n;i>0 ;i--)
+		{
+			for (int j=i;j>0;j-- )
+			{
+				System.out.print(x%2+" ");
+				x++;
+				
+			}
+			System.out.println();
+			
+		}
+		
+	}
+}

@@ -1,0 +1,47 @@
+//wajp to define a method to insert new array index to the specified index to the given array
+import java.util.Scanner;
+class Array12 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter the size of an array");
+		int n=sc.nextInt();
+		int ar1 []=new int [n];
+		System.out.println ("Enter "+n+" values of first array");
+		for (int i=0;i<ar1.length ;i++ )
+		{
+			ar1 [i]=sc.nextInt();
+		}
+		System.out.println ("Enter the index value");
+		int in=sc.nextInt();
+		System.out.println ("insert the element value");
+		int ele=sc.nextInt();
+		int rs []=getInserted(ar1,in,ele);
+		for (int i=0;i<rs.length ;i++ )
+		{
+			System.out.print (rs [i]+" ");
+		}
+	}
+	public static int [] getInserted (int [] arr,int in,int ele)
+	{
+	    if (in<0 || in>=arr.length)
+	    {
+			System.out.println ("Array is not in the range");
+			return arr;
+	    }
+		int [] a=new int [arr.length+1];
+		for (int i=0;i<arr.length ;i++ )
+		{
+			if (i<in)
+			{
+				a [i]=arr[i];
+			}
+			else 
+				a [i+1]=arr [i];
+		}
+		a [in]=ele;
+		return a;
+
+	}
+}
