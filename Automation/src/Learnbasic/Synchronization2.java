@@ -20,6 +20,7 @@ public class Synchronization2 {
 		driver.findElement(By.name("pwd")).sendKeys("manager");
 		driver.findElement(By.xpath("//div[text()='Login ']")).click();
 		//WebDriverWait wait=new WebDriverWait(driver,10);
+		//Explict wait instead of implicit wait.
 	}
 
 }
